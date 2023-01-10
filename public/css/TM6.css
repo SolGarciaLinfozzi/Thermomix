@@ -1,0 +1,72 @@
+.fondoConoceMas {
+    background-image: url(/img/portada8.jpg);
+    text-align: center;
+    padding: 175px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.fondoConoceMas::before {
+    content: '';
+    position: absolute;
+    background: rgb(10, 10, 10);
+    opacity: 0.4;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.fondoConoceMas div {
+    color: white;
+    font-size: 32px;
+    position: relative;
+    display: flexbox;
+    flex-direction: column;
+}
+
+
+.titulo1 {
+    color: rgb(68, 68, 68);
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.videoYT{
+    margin-bottom: 150px;
+    
+}
+
+.partesThermomix {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.caracteristicas {
+    display: flexbox;
+    flex-direction: column;
+}
+
+.caracteristicas div {
+    display: flex;
+}
+
+.caracteristicas div div {
+    display: flexbox;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-bottom: 50px;
+    align-items: stretch;
+}
+
+.caracteristicas div div h4 {
+    color: rgb(18, 150, 18);
+}
+
+.caracteristicas div div h5 {
+    color: rgb(83, 82, 82);
+
+}
+

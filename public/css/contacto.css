@@ -1,0 +1,253 @@
+.fondoContacto {
+  background-image: url(/img/portadaContacto.jpg);
+  background-size: cover;
+  text-align: center;
+  padding: 160px 0;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.fondoContacto::before {
+  content: '';
+  position: absolute;
+  background: black;
+  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fondoContacto div {
+  color: white;
+  font-size: 32px;
+  position: relative;
+}
+
+
+/* CARD LOCAL*/
+
+
+.cardsLocales {
+  width: 100%;
+  max-width: 1200px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 600px;
+}
+
+.cardsLocales .cardLocal {
+  width: 350px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.cardsLocales .cardLocal:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardsLocales .cardLocal h4 {
+  font-weight: 600;
+}
+
+.cardsLocales .cardLocal p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.cardsLocales .cardLocal a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nombreLocal {
+  margin-top: 25px;
+  color: #009a3d;
+}
+
+.descripcionLocal {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.descripcionLocal h5 {
+  padding-top: 10px;
+}
+
+/* FORMULARIO */
+
+.formSuscripcion {
+  margin-top: 60px;
+}
+
+.hrEspaciado {
+  margin-top: 60px;
+}
+
+.wrapper {
+  min-height: 100vh;
+  color: #009a3d;
+  font-size: 1rem;
+  background-color: #F1E8E6;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  border-radius: 1em;
+  max-width: 768px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-box-shadow: 0px 17px 34px -20px #009a3d;
+  box-shadow: 0px 17px 34px -20px #009a3d;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.text {
+  font-size: 1rem;
+  margin-bottom: 0.8em;
+  color: #404041;
+}
+
+.container {
+  max-width: 400px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 1em 1em 0 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.img__container {
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+
+.title {
+  margin-bottom: 0.9em;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+  margin-bottom: 1.8em;
+}
+
+.mail {
+  padding: 0.5em 0 0.5em 1.5em;
+  line-height: 3;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+
+::-webkit-input-placeholder {
+  color: #464646;
+}
+
+:-ms-input-placeholder {
+  color: #545455;
+}
+
+::-ms-input-placeholder {
+  color: #404041;
+}
+
+::placeholder {
+  color: #4a4a4b;
+}
+
+.subscribe {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: #009a3d;
+  padding: 0.9em 0;
+  display: inline-block;
+  border: none;
+  border-radius: 0.5em;
+  width: 100%;
+  margin-bottom: 1.3em;
+}
+
+.text {
+  font-size: 0.9rem;
+  width: 90%;
+  text-align: center;
+}
+
+
+.centrado {
+  text-align: center;
+}
+
+.infoMail {
+  margin-bottom: 20px;
+}
+
+
+/* contacto form */
+
+.formContacto {
+  background-image: url(https://media.vorwerk.com/is/image/vorwerk/FR-thermomix-promo-actus-header:3x2?wid=1200&hei=800);
+  background-size: cover;
+  text-align: center;
+  padding: 200px 200px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.formContacto div {
+  background-color: white;
+  opacity: 0.89;
+  color: black;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+}
+
+.casilla{
+  background-color: #ffffff;
+}
+
+.tituloContacto{
+  margin-bottom: 40px;
+}

@@ -1,0 +1,125 @@
+<div class="font">
+    <div class="fondoContacto">
+        <div>
+            <h1> ¡Contactanos!
+            </h1>
+            <h3> Para agendar una demo podés contactar a tu agente Thermomix, <br>
+                para que tengas la oportunidad de invitarte a vivir la experiencia Thermomix.</h3>
+        </div>
+    </div>
+
+    <div class="font">
+        <h2 class="tituloArticulo" data-aos="fade-up"> Nuestros locales en Argentina </h2>
+
+        <div class="cardsLocales ">
+            <div class="cardLocal" data-aos="fade-up">
+                <img height="220px" width="350px" src="/img/vicenteLopez.jpg">
+                <h4 class="nombreLocal ">Vicente Lopez</h4>
+                <div class="descripcionLocal">
+                    <p class="card-text">Av. Libertador 1030 <br>
+                        1134479310<br>
+                        localvicentelopez@tharsa.com.ar <br>
+                        Lun a Vie 8 a 21 hs <br>
+                        Sáb 10 a 17 hs</p>
+                </div>
+            </div>
+
+            <div class="cardLocal" data-aos="fade-up">
+                <img height="220px" width="350px" src="/img/carrefourAlcorta.jpg">
+                <h4 class="nombreLocal">Carrefour Alcorta</h4>
+                <div class="descripcionLocal">
+                    <p class="card-text">Jerónimo Salguero | Planta Baja <br>
+                        1124644770 <br>
+                        localcfsalguero@tharsa.com.ar <br>
+                        Lun a Sab 8 a 21:30 hs
+                        Dom 8 a 21:30 hs</p>
+                </div>
+            </div>
+
+            <div class="cardLocal" data-aos="fade-up">
+                <img height="220px" width="350px" src="/img/paseoAlcorta.jpg">
+                <h4 class="nombreLocal">Paseo Alcorta </h4>
+                <div class="descripcionLocal">
+                    <p class="card-text">3er. Piso | Jerónimo Salguero <br>
+                        1128881077 <br>
+                        localalcorta@tharsa.com.ar <br>
+                        Lun a Dom | 10:00 a 21:00</p>
+                </div>
+            </div>
+
+            <div class="cardLocal" data-aos="fade-up">
+                <img height="220px" width="350px" src="/img/canning.jpg">
+                <h4 class="nombreLocal">Canning</h4>
+                <div class="descripcionLocal">
+                    <p class="card-text">Mariano Castex 5325 <br>
+                        1126207333 <br>
+                        localcanning@tharsa.com.ar <br>
+                        Lun a Vie 10 a 19 hs <br>
+                        Sáb 10 a 13 hs</p>
+                </div>
+            </div>
+
+            <div class="cardLocal" data-aos="fade-up">
+                <img height="220px" width="350px" src="/img/salta.jpg">
+                <h4 class="nombreLocal">Salta</h4>
+                <div class="descripcionLocal">
+                    <p class="card-text">Entre ríos 898, Esquina 25 de Mayo <br>
+                        1126207272 <br>
+                        localsalta@tharsa.com.ar <br>
+                        Lun a Vie 10 a 19 hs <br>
+                        Sáb 10 a 13 hs</p>
+                </div>
+            </div>
+
+            <div class="cardLocal" data-aos="fade-up">
+                <img height="220px" width="350px" src="/img/cordobaShopping.jpg">
+                <h4 class="nombreLocal">Córdoba Shopping</h4>
+                <div class="descripcionLocal">
+                    <p class="card-text">José A. de Goyechea 2851 <br>
+                        +5493516146953 <br>
+                        localcordoba@tharsa.com.ar <br>
+                        Lun a Dom 11 a 21 hs</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <form action="/contacto" method="post" class="formContacto">
+        <div class="content">
+            <h1 class="title centrado tituloContacto "> Dejanos tu consulta</h1>
+            <input type="text" class="mail casilla" placeholder="Nombre" id="nombre" name="nombre" required>
+            <input type="email" class="mail casilla" placeholder="Email" id="email" name="email" required>
+            <textarea type="text" class="mail casilla" placeholder="Consulta" id="consulta" name="consulta"
+                required></textarea>
+            <p class="text infoMail">Nuestro equipo se contactará contigo.</p>
+            <button onclick="alertConsultaEnviada()" class="botonEfecto2" type="submit"> Enviar </button>
+        </div>
+    </form>
+
+</div>
+
+
+<script>
+
+    function alertConsultaEnviada() {
+        let email = document.getElementById('email').value
+        let nombre = document.getElementById('nombre').value.length
+        let consulta = document.getElementById('consulta').value.length
+
+        if (nombre > 0 && consulta > 0 && email.length > 0 && (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63})/i.test(email))  ) {
+
+            swal({
+                title: 'Consulta recibida',
+                text: 'Revise su buzón de entrada.',
+                icon: 'success',
+                buttons: false,
+                timer: 3000,
+            })
+        }
+    }
+
+</script>

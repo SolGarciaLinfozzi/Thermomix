@@ -1,0 +1,85 @@
+<body class="bodyLogin font ">
+
+	<div class="error">
+		{{#if error}}
+
+		<h4>{{error}}</h4>
+
+		{{/if}}
+	</div>
+
+	<div class="container" id="container">
+
+		<div class="form-container sign-up-container ">
+			<form action="/login" method="post" class="formLogin">
+				<h2 class="tituloLogin"> Registrarse </h2>
+				<input type="email" class="mail" placeholder="Email" id="email" name="email" required>
+				<input type="text" class="mail" placeholder="Nombre completo" id="name" name="name" required>
+				<input type="password" class="mail" placeholder="Contraseña" id="password" name="password" required>
+				<div class="terminosYCondiciones">
+					<input checked="" type="checkbox" id="_checkbox" required>
+					<label class="checkbox" for="_checkbox">
+						<div id="tick_mark"></div>
+					</label>
+					<p>Acepto los terminos y/o condiciones.</p>
+				</div>
+				<button class="botonLogin" type="submit" class=""> Registrarse </button>
+			</form>
+		</div>
+
+
+		<div class="form-container sign-in-container ">
+			<form action="/sesion" class="formLogin" method="post">
+				<h2 class="tituloLogin"> Iniciar sesión </h2>
+				<input type="email" class="mail" placeholder="Email" id="emailUsuario" name="emailUsuario" required>
+				<input type="password" class="mail" placeholder="Contraseña" id="passwordUsuario" name="passwordUsuario"
+					required>
+				<button id="iniciarSesion" class="botonLogin">Iniciar</button>
+			</form>
+		</div>
+
+
+
+
+		<div class="overlay-container">
+
+			<div class="overlay">
+
+				<div class="overlay-panel overlay-left">
+					<h1>¿Ya tienes una cuenta?</h1>
+					<p> Inicia sesión para disfrutar de todo el contenido exclusivo </p>
+					<button class="ghost botonLogin" id="signIn">Iniciar sesión</button>
+				</div>
+
+				<div class="overlay-panel overlay-right">
+					<h1> ¿Todavía no te sumaste a nuesta comunidad?</h1>
+					<p> Ingresa tus datos para pertencer</p>
+					<button class="ghost botonLogin" id="signUp"> Registrarse </button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+</body>
+
+
+<script>
+
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
+
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+
+</script>

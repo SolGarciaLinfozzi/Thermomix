@@ -1,0 +1,141 @@
+<div class="font fondoPerfil">
+
+    {{#if login}}
+    <div>
+        <div class="cardPerfil" data-aos="fade-up">
+            <div class="nombreUsuario">
+                <img height="60px" src="./img/professional-chef-icon.png" alt="iconoPerfil">
+                <h3> {{nombreLogin}} </h3>
+            </div>
+            <div>
+                <div class="descripcionPerfil">
+                    <h5> Email: {{emailLogin}} </h5>
+                    <div id="contrasenia">
+                        <button class="botonCambiarContrasenia cambiarContrasenia"> Modificar contraseña </button>
+                    </div>
+                    {{#if error}}
+                    <p class="errorCambiarContrasenia"> {{error}} </p>
+                    {{/if}}
+                </div>
+            </div>
+            {{#if error}}
+            <div class="footerCardPerfilERROR">
+                <div id="configuracion">
+                    <button class="botonCerrarSesion cerrarSesion"> Cerrar Sesión </button>
+                    <button class="botonEliminarCuenta eliminarCuenta"> Eliminar cuenta </button>
+                </div>
+            </div>
+            {{else}}
+            <div class="footerCardPerfil">
+                <div id="configuracion">
+                    <button class="botonCerrarSesion cerrarSesion"> Cerrar Sesión </button>
+                    <button class="botonEliminarCuenta eliminarCuenta"> Eliminar cuenta </button>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+
+    </div>
+
+    {{/if}}
+
+</div>
+
+
+
+</div>
+
+{{!-- MODAL MODIFICAR CONTRASEÑA --}}
+
+<form action="/cambiarContrasenia" method="post">
+    <div class=" modal  modalCambiarContrasenia" id="modalCambiarContrasenia" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modalPerfil">
+                    <input type="password" class="mail casilla" placeholder="Contraseña actual" id="actualContrasenia"
+                        name="actualContrasenia" required>
+                    <input type="password" class="mail casilla" placeholder="Nueva contraseña" id="nuevaContrasenia"
+                        name="nuevaContrasenia" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger"> Modificar </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{{!-- MODAL CERRAR CUENTA --}}
+
+<form action="/cerrarSesion" method="post">
+    <div class=" modal  modalCerrarSesion" id="modalCerrarSesion" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modalPerfil">
+                    <h4>¿Está seguro que desea cerrar sesión?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{{!-- MODAL ELIMINAR CUENTA --}}
+
+<form action="/eliminarCuenta" method="post">
+    <div class=" modal  modalEliminarCuenta" id="modalEliminarCuenta" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modalPerfil">
+                    <h4>¿Está seguro que desea eliminar la cuenta?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{{!-- js bootstrap --}}
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+
+<script>
+
+    $(document).ready(function () {
+        $('#contrasenia').on('click', '.cambiarContrasenia', function () {
+            let actualContrasenia = $(this).data('actualContrasenia')
+            let nuevaContrasenia = $(this).data('nuevaContrasenia')
+            $('#modalCambiarContrasenia').modal('show')
+        })
+    })
+
+    $(document).ready(function () {
+        $('#configuracion').on('click', '.cerrarSesion', function () {
+            $('#modalCerrarSesion').modal('show')
+        })
+    })
+
+    $(document).ready(function () {
+        $('#configuracion').on('click', '.eliminarCuenta', function () {
+            $('#modalEliminarCuenta').modal('show')
+        })
+    })
+
+</script>

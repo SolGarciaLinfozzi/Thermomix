@@ -1,0 +1,144 @@
+header {
+    width: 100;
+}
+
+body {
+    background: white;
+}
+
+.font {
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.tituloArticulo {
+    color: #058b1c;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.imgCentrada {
+    text-align: center;
+}
+
+/* boton con efecto */
+
+.botonEfecto1 ul li {
+    list-style: none;
+    margin: 10px;
+    text-align: center;
+}
+
+.botonEfecto1 ul li a {
+    color: #009a3d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+}
+
+
+.botonEfecto1 ul li:hover a {
+    padding: 5px 10px;
+    background: #009a3d;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Boton con efecto */
+
+.botonEfecto2 {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #009a3d;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.botonEfecto2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #009a3d;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.botonEfecto2:hover {
+    color: #e8e8e8;
+}
+
+.botonEfecto2:hover::before {
+    width: 100%;
+}
+
+/* Boton Enviar con efecto */
+
+.botonEnviarEfecto {
+    font-family: inherit;
+    font-size: 20px;
+    background: #009a3d;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    margin-top: 20px;
+}
+
+.botonEnviarEfecto span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.botonEnviarEfecto svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.botonEnviarEfecto:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.botonEnviarEfecto:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.botonEnviarEfecto:hover span {
+    transform: translateX(5em);
+}
+
+.botonEnviarEfecto:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}

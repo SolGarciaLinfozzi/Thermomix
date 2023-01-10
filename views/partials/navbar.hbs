@@ -1,0 +1,78 @@
+<nav class="nav font">
+
+    <a href="./">
+        <img class="logoThermomix" height="40px"
+            src="https://thermomixargentina.com/wp-content/uploads/2020/12/logo-thermomix.svg" alt="Logo Thermomix">
+        {{!-- /* posibleNombre: logoThermomix */ --}}
+    </a>
+
+    <ul>
+        <li>
+            <a href="./">
+                Inicio
+            </a>
+        </li>
+        <li>
+            <a href="./TM6">
+                TM6
+            </a>
+        </li>
+        <li>
+            <a href="./contacto">
+                <i class="bi bi-chat-right-text"></i>
+            </a>
+        </li>
+        {{#if login}}
+        <li>
+            <a href="./miPerfil">
+                <i class="bi bi-person-circle"></i>
+            </a>
+        </li>
+        {{else}}
+        <li id="miPerfil">
+            <a href="javascript:void(0);">
+                <i class="bi bi-person-circle perfil"></i>
+            </a>
+        </li>
+        {{/if}}
+    </ul>
+</nav>
+
+{{!-- MODAL --}}
+
+<div class=" modal modalPerfil" id="modalPerfil" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modalPerfil">
+                <h3>¿Todavía no iniciaste sesión?</h3>
+                <h4 class="textoModal" >Ingresa para disfrutar de todo el contenido exclusivo.</h4>
+                <div class="botonEfecto1 botonIniciarSesion">
+                    <ul>
+                        <li>
+                            <a href="/login">
+                                Iniciar Sesión
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{!-- js bootstrap --}}
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+
+<script>
+    $(document).ready(function () {
+        $('#miPerfil').on('click', '.perfil', function () {  //cuando hagan click en perfil
+            $('#modalPerfil').modal('show')   //mostrame el modal: modalPerfil
+        })
+    })
+</script>
