@@ -215,7 +215,6 @@ app.post('/eliminarCuenta', (req, res) => {
             let sql2 = "select * from comentarios"
             conexion.query(sql2, function (err, result) {
                 if (err) throw err;
-                console.log('Dato eliminado')
                 res.render('index', {
                     login: req.session.loggedin,
                     nombreLogin: req.session.nombre,
@@ -429,7 +428,6 @@ app.post('/contacto', (req, res) => {
     conexion.query(sql, datos, function (err) {
         if (err) throw err;
         enviarMail().catch(console.error)
-        console.log('Consulta Registrada')
     })
 
 })
@@ -439,4 +437,3 @@ app.post('/contacto', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor trabajando en el puerto ${PORT}`);
 })
-

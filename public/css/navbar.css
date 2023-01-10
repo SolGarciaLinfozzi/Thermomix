@@ -1,46 +1,63 @@
-.logoThermomix{    
-    margin-left: 30px;
-}
-
-.nav{
-    background: white;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:  5px;
-}
-
-.nav ul{
+.nav ul {
     display: flex;
     margin-top: 20px;
 }
 
-.nav ul li{
+.nav ul li {
     list-style: none;
     margin: 10px;
 }
 
-.nav ul li a{
+.nav ul li a {
     color: #009a3d;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.3rem;
-    transition: all 0.4s ease; 
+    transition: all 0.4s ease;
 }
 
 
-.nav ul li:hover a{
+.nav ul li:hover a {
     padding: 5px 10px;
     background: #009a3d;
     color: white;
     border-radius: 15px;
 }
 
-.modalPerfil{
+.modalPerfil {
     text-align: center;
 }
 
-.textoModal{
+.textoModal {
     margin-top: 30px;
+}
+
+@media screen and (max-width: 525px) {
+    .logoThermomix {
+        margin-left: 30px;
+    }
+    
+    .nav {
+        background: white;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 525px) {
+    .logoThermomix {
+        margin-left: 30px;
+    }
+    
+    .nav {
+        background: white;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+    }
 }

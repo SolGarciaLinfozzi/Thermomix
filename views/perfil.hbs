@@ -7,7 +7,6 @@
                 <img height="60px" src="./img/professional-chef-icon.png" alt="iconoPerfil">
                 <h3> {{nombreLogin}} </h3>
             </div>
-            <div>
                 <div class="descripcionPerfil">
                     <h5> Email: {{emailLogin}} </h5>
                     <div id="contrasenia">
@@ -17,17 +16,16 @@
                     <p class="errorCambiarContrasenia"> {{error}} </p>
                     {{/if}}
                 </div>
-            </div>
             {{#if error}}
             <div class="footerCardPerfilERROR">
-                <div id="configuracion">
+                <div id="configuracion" class="configuracion">
                     <button class="botonCerrarSesion cerrarSesion"> Cerrar Sesión </button>
                     <button class="botonEliminarCuenta eliminarCuenta"> Eliminar cuenta </button>
                 </div>
             </div>
             {{else}}
             <div class="footerCardPerfil">
-                <div id="configuracion">
+                <div id="configuracion" class="configuracion">
                     <button class="botonCerrarSesion cerrarSesion"> Cerrar Sesión </button>
                     <button class="botonEliminarCuenta eliminarCuenta"> Eliminar cuenta </button>
                 </div>

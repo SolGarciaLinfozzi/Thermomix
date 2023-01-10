@@ -345,9 +345,34 @@ label:active {
 	margin-top: 9px;
 }
 
-.terminosYCondiciones{
-	display: flex;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-right: 200px;
-}
+
+@media screen and (max-width: 999px) {
+
+	
+	.terminosYCondiciones{
+		display: flex;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 50px;
+	}
+  }
+  
+  @media screen and (min-width: 999px) and (max-width: 1199px) {
+	
+	.terminosYCondiciones{
+		display: flex;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 100px;
+	}
+  }
+  
+  @media screen and (min-width: 1199px) {
+	
+	.terminosYCondiciones{
+		display: flex;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 200px;
+	}
+  }

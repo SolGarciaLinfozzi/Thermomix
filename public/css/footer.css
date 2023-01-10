@@ -2,23 +2,14 @@
     color:rgb(110, 110, 110);
 }
 .parrafoFooter{
-    margin-right: 600px;
-}
-
-.iconFooter{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    width: 300px;
 }
 
 .cajaFooter{
     margin-left: 100px;
     margin-right: 100px;
-
 }
 
 .fondoTransparente{
     background: transparent;
 }
-
