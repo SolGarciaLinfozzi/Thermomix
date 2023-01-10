@@ -380,7 +380,7 @@ app.post('/login', async (req, res) => {
 
 
         } else {
-            enviarMail().catch(console.error)
+            enviarMail()
             res.render('login', { error: 'Registro exitoso' })
         }
 
@@ -427,13 +427,13 @@ app.post('/contacto', (req, res) => {
     let sql = "INSERT INTO consultas SET ?"
     conexion.query(sql, datos, function (err) {
         if (err) throw err;
-        enviarMail().catch(console.error)
+        enviarMail()
     })
 
 })
 
 
-//servidor 
+// servidor 
 app.listen(PORT, () => {
     console.log(`Servidor trabajando en el puerto ${PORT}`);
 })
