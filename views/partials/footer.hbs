@@ -1,4 +1,4 @@
-<div class="cajaFooter font">
+{{!-- <div class="cajaFooter font">
 
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
@@ -33,4 +33,32 @@
 
             </div>
         </footer>
+    </div> --}}
+
+
+
+
+
+    <div class=" cajaFooter font fontFooter">
+
+        <div class="headerFooter">
+            <p class="">&copy; 2022 Company, Inc</p>
+            <ul class=" menuFooter">
+                <li class=""><a href="./" class="">Inicio</a></li>
+                <li class=""><a href="./TM6" class="">TM6</a></li>
+                <li class=""><a href="./contacto" class="">Contacto</a></li>
+                {{#if login}}
+                <li class=""><a href="./miPerfil" class=""> Perfil </a></li>
+                {{/if}}
+            </ul>
+        </div>
+
+        <div><i class="bi bi-telephone-fill telefono"></i> 011 15-3447-9310</div>
+
+        <p class="parrafoFooter">
+                    Av. del Libertador 1030, B1638 Vicente López,  <br> Provincia de Buenos Aires. <br>
+                    Lunes a Viernes: 08:00 a 21:00hs - Sábados: 10:00hs a 17:00hs
+        </p>
+
+
     </div>

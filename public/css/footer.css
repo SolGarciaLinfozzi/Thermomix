@@ -1,16 +1,48 @@
-.footer{
-    color:rgb(110, 110, 110);
-}
-.parrafoFooter{
-    margin-top: 40px;
+.fontFooter {
+    color: rgb(110, 110, 110);
 }
 
-.cajaFooter{
-    margin-left: 100px;
-    margin-right: 100px;
+.menuFooter li {
+    margin-left: 10px;
+    list-style: none;
 }
 
-.fondoTransparente{
-    background: transparent;
+.menuFooter li a {
+    text-decoration: none;
+    color: rgb(110, 110, 110);
 }
 
+.parrafoFooter {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 610px) {
+
+    .cajaFooter {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+}
+
+
+@media screen and (min-width: 610px) {
+
+    .cajaFooter {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+
+    .headerFooter {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menuFooter {
+        display: flex;
+    }
+
+}
