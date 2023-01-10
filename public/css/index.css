@@ -138,7 +138,7 @@ input:valid~label {
 .inputComentario {
   border-style: none;
   background-color: transparent;
-  width: 1100px;
+  width: 100%;
 }
 
 .botonConoceMas {

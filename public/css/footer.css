@@ -2,7 +2,7 @@
     color:rgb(110, 110, 110);
 }
 .parrafoFooter{
-    width: 300px;
+    margin-top: 40px;
 }
 
 .cajaFooter{
@@ -13,3 +13,4 @@
 .fondoTransparente{
     background: transparent;
 }
+
