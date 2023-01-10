@@ -25,11 +25,5 @@ primary key(idConsulta)
 ); 
 
 
--- Eliminar una tabla de datos --
-drop table comentarios;
-drop table usuarios;
-drop table consultas;
-
-
 
 
