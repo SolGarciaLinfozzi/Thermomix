@@ -1,4 +1,4 @@
-const express = require('express')          //revisar cuales son necesarias
+const express = require('express')          
 const app = express()
 const mysql = require('mysql2')
 const hbs = require('hbs')
