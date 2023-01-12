@@ -4,7 +4,7 @@ use thermomix;
 create table usuarios(
 email varchar(200) not null,
 nombre varchar(200) not null,
-contrasenia varchar(20) not null,
+contrasenia varchar(200) not null,
 primary key(email)
 ); 
 
