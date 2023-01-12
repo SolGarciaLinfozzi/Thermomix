@@ -91,9 +91,9 @@
     <form action="/contacto" method="post" class="formContacto">
         <div class="content">
             <h1 class="title centrado tituloContacto "> Dejanos tu consulta</h1>
-            <input type="text" class="mail casilla" placeholder="Nombre" id="nombre" name="nombre" required>
-            <input type="email" class="mail casilla" placeholder="Email" id="email" name="email" required>
-            <textarea type="text" class="mail casilla" placeholder="Consulta" id="consulta" name="consulta"
+            <input maxlength="200" type="text" class="mail casilla" placeholder="Nombre" id="nombre" name="nombre" required>
+            <input maxlength="200"type="email" class="mail casilla" placeholder="Email" id="email" name="email" required>
+            <textarea maxlength="400" type="text" class="mail casilla" placeholder="Consulta" id="consulta" name="consulta"
                 required></textarea>
             <p class="text infoMail">Nuestro equipo se contactará contigo.</p>
             <button onclick="alertConsultaEnviada()" class="botonEfecto2" type="submit"> Enviar </button>
