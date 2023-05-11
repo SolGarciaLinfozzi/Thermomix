@@ -31,53 +31,50 @@ app.set('views', path.join(__dirname, 'views'))
 hbs.registerPartials(path.join(__dirname, 'views/partials'))
 
 //conexión a la base de datos
-// const conexion = mysql.createConnection({
-//     host: process.env.HOST,
-//     port: process.env.DBPORT,
-//     user: process.env.USER,
-//     password: process.env.PASSWORD,
-//     database: process.env.DATABASE
-// })
+const conexion = mysql.createConnection({
+    host: process.env.HOST,
+    port: process.env.DBPORT,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
+})
 
-// conexion.connect((error) => {
-//     if (error) {
-//         console.log(`El error es: ${error}`);
-//     } else {
-//         console.log(`Conectado a la Base de Datos ${process.env.DATABASE}`);
-//     }
-// })
+conexion.connect((error) => {
+    if (error) {
+        console.log(`El error es: ${error}`);
+    } else {
+        console.log(`Conectado a la Base de Datos ${process.env.DATABASE}`);
+    }
+})
 
 
 
 //Rutas de las peticiones
 
+
 app.get('/', (req, res) => {
-    res.render('index')
+
+    var mensajeComentario
+
+    if (req.session.loggedin) {
+        mensajeComentario = "Agregar un comentario"
+    }
+    else {
+        mensajeComentario = "Debe iniciar sesión para agregar un comentario"
+    }
+
+    let sql = "select * from comentarios";
+    conexion.query(sql, function (err, result) {
+        if (err) throw err;
+        res.render('index', {
+            login: req.session.loggedin,
+            nombreLogin: req.session.nombre,
+            emailLogin: req.session.mail,
+            datos: result,
+            mensajeComentario: mensajeComentario
+        })
+    })
 })
-
-// app.get('/', (req, res) => {
-
-//     var mensajeComentario
-
-//     if (req.session.loggedin) {
-//         mensajeComentario = "Agregar un comentario"
-//     }
-//     else {
-//         mensajeComentario = "Debe iniciar sesión para agregar un comentario"
-//     }
-
-//     let sql = "select * from comentarios";
-//     conexion.query(sql, function (err, result) {
-//         if (err) throw err;
-//         res.render('index', {
-//             login: req.session.loggedin,
-//             nombreLogin: req.session.nombre,
-//             emailLogin: req.session.mail,
-//             datos: result,
-//             mensajeComentario: mensajeComentario
-//         })
-//     })
-// })
 
 
 app.get('/login', (req, res) => {
