@@ -305,14 +305,14 @@ app.post('/sesion', async (req, res) => {
     conexion.query(sql, async (err, result) => {
 
         if (result.length == 0) {
-
+            console.log('Error: usuario NO registrado')
             res.render('login', { error: 'Error: usuario NO registrado' })
 
         }
         else {
             if (!(await bcryptjs.compare(passwordUsuario, result[0].contrasenia))) {
                 res.render('login', { error: 'Error: Contraseña incorrecta' })
-
+                console.log('Error: Contraseña incorrecta')
             }
             else {
                 req.session.loggedin = true
@@ -377,6 +377,7 @@ app.post('/login', async (req, res) => {
     let sql = "INSERT INTO usuarios SET ?"
     conexion.query(sql, datos, function (err) {
         if (err) {
+            
             res.render('login', { error: 'Error: El email ya se encuentra registrado' })
 
 
